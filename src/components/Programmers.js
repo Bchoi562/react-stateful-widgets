@@ -38,8 +38,8 @@ export default function Programmers() {
     // The beauty of closures is that we can "see" both slices of state from this region
     // of the program, without needing to inject the information through arguments.
 
-    
-    return programmerNames.find(pr => pr.id === id)?.name;
+    return id === null ? null : programmerNames[id-1].name
+    // return programmerNames.find(pr => pr.id === id)?.name;
   };
 
   const style = {
